@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@500;600&display=swap');
+
+.refrigerator {
+    width: 90%;
+    max-width: 720px;
+    height: 700px;
+    min-height: 760px;
+
+    margin: 40px auto;
+
+    background: #8acbce;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 18px 35px rgba(0, 0, 0, 0.18);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scroll-snap-type: y mandatory;
+}
+
+.freezer {
+    width: 100%;
+    min-height: 270px;
+
+    box-sizing: border-box;
+
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border-bottom: 2px solid rgba(255, 255, 255, 0.45);
+    scroll-snap-align: start;
+}
+
+.freezer h2 {
+    margin: 0 0 22px;
+
+    text-align: center;
+
+    font-family: 'Bree Serif', serif;
+
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: italic;
+
+    letter-spacing: 1px;
+
+    color: #243b3d;
+}
+
+.notes-area {
+    min-height: 100%;
+
+    box-sizing: border-box;
+
+    padding: 30px 25px 40px;
+
+    scroll-snap-align: start;
+}
+
+.grid-notes {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+.pinned-note {
+    position: relative;
+}
+
+.pinned-note::after {
+    content: '*';
+    position: absolute;
+
+    top: -12px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(5deg);
+
+    font-size: 24px;
+
+    z-index: 10;
+
+    filter: drop-shadow(
+        2px 3px 2px rgba(0, 0, 0, 0.25)
+    );
+
+    pointer-events: none;
+}
+
+
+.addNote {
+    width: 180px;
+    height: 180px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+
+    color: white;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.addNote:hover {
+    background: rgba(255, 255, 255, 0.35);
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.addNote:active {
+    transform: translateY(0) scale(0.97);
+}
+
+.addNote .icon-add {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1;
+}

@@ -1,0 +1,57 @@
+.preview-note {
+    position: relative;
+
+    width: 180px;
+    height: 180px;
+
+    padding: 25px 18px;
+
+    box-sizing: border-box;
+
+    background-color: #fcfaf2;
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 31px,
+        #d8d3c5 31px,
+        #d8d3c5 32px
+    );
+
+    box-shadow:
+        3px 5px 12px rgba(0, 0, 0, 0.15);
+
+    transform: rotate(-1deg);
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.preview-note:hover {
+    transform: rotate(0deg) translateY(-4px);
+
+    box-shadow:
+        5px 9px 16px rgba(0, 0, 0, 0.20);
+}
+
+
+.preview-note h1 {
+    margin: 0;
+
+    text-align: center;
+
+    font-family: 'Caveat', cursive;
+
+    font-size: 1.7rem;
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    color: #2b2b2b;
+
+    word-break: break-word;
+}

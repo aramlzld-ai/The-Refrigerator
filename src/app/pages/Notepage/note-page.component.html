@@ -1,0 +1,24 @@
+<div class="note-container">
+    
+        <button class="btnBack" routerLink="/">X</button>
+        <input
+        type="text"
+        class="note-tittle"
+        placeholder="Note Tittle"
+        [value]="noteTittle()"
+        (input)="noteTittle.set($any($event.target).value)"
+        />
+        <textarea
+        class="note-body"
+        placeholder="Note Body"
+        [value]="noteBody()"
+        (input)="noteBody.set($any($event.target).value)"
+        rows="8"></textarea>
+
+        @if(noteIdentifier){
+            <button class="btnSave" (click)="editNote()">Save</button>
+        } @else {
+            <button class="btnAdd" (click)="addNote()">Add</button>
+        }
+
+</div>

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap');
+
+.close{
+   position: absolute;
+
+    top: 10px;
+    right: 12px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    background: transparent;
+
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+
+    color: #777;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+.close:hover{
+    color: #2b2b2b;
+
+    transform: rotate(8deg) scale(1.1);
+}
+
+.pin,
+.edit,
+.delete {
+    border: none;
+
+    padding: 8px 14px;
+
+    margin-right: 8px;
+
+    font-family: 'Caveat', cursive;
+
+    font-size: 1.15rem;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.pin {
+    background: #f4d35e;
+
+    color: #3d3520;
+
+    transform: rotate(-2deg);
+
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.12);
+}
+
+.pin:hover {
+    transform: rotate(1deg) translateY(-2px);
+
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.18);
+}
+
+.edit {
+    background: #d8e9e8;
+
+    color: #315354;
+
+    transform: rotate(1deg);
+
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.10);
+}
+
+.edit:hover {
+    transform: rotate(-1deg) translateY(-2px);
+
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.15);
+}
+
+.delete {
+    background: #e8a5a5;
+
+    color: #5a3030;
+
+    transform: rotate(-1deg);
+
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.10);
+}
+
+.delete:hover {
+    transform: rotate(1deg) translateY(-2px);
+
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.16);
+}
+
+.pin:active,
+.edit:active,
+.delete:active {
+    transform: translateY(1px) scale(0.97);
+}
+
+:host {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(2px);
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+
+.detail-note {
+    position: relative;
+
+    width: 90%;
+    max-width: 480px;
+
+    max-height: 80vh;
+
+    padding: 40px 30px 20px 50px;
+
+    box-sizing: border-box;
+
+    background-color: #fcfaf2;
+
+    border-radius: 4px;
+
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 31px,
+        #d8d3c5 31px,
+        #d8d3c5 32px
+    );
+
+    border-left: 2px solid #e8a5a5;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25);
+
+    overflow-y: auto;
+}
+
+
+.tittle,
+.body {
+    width: 100%;
+
+    background: transparent;
+
+    border: none;
+    outline: none;
+
+    color: #2b2b2b;
+
+    font-family: 'Caveat', cursive;
+}
+
+
+.tittle {
+    font-size: 2.4rem;
+}
+
+
+.body {
+    font-size: 1.4rem;
+
+    line-height: 1.5;
+}

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap');
+
+.note-container{
+    position: relative;
+
+    width: 90%;
+    max-width: 480px;
+    max-height: 80vh;
+
+    padding: 40px 30px 25px 50px;
+    margin: 40px auto;
+
+    box-sizing: border-box;
+
+    background-color: #fcfaf2;
+    border-radius: 4px;
+
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 31px,
+        #d8d3c5 31px,
+        #d8d3c5 32px
+    );
+
+    border-left: 2px solid #e8a5a5;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+.btnBack {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    background: transparent;
+
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+
+    color: #777;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.btnBack:hover {
+    color: #2b2b2b;
+    transform: rotate(8deg) scale(1.1);
+}
+
+.note-tittle, .note-body{
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: #2b2b2b;
+
+    font-family: 'Caveat', cursive;
+}
+
+.note-tittle{
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    height: 40px;
+    line-height: 40px;
+
+    margin-bottom: 24px;
+}
+.note-body{
+    font-size: 1.4rem;
+    line-height: 32px;
+
+    resize: none;
+}
+
+.btnSave,
+.btnAdd {
+    border: none;
+
+    padding: 8px 18px;
+    margin-top: 20px;
+
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+
+.btnSave {
+    background: #d8e9e8;
+    color: #315354;
+
+    transform: rotate(1deg);
+
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.10);
+}
+
+.btnSave:hover {
+    transform: rotate(-1deg) translateY(-2px);
+
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btnAdd {
+    background: #d8e9e8;
+    color: #315354;
+
+    transform: rotate(-1deg);
+
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.10);
+}
+
+.btnAdd:hover {
+    transform: rotate(1deg) translateY(-2px);
+
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btnSave:active,
+.btnAdd:active {
+    transform: translateY(1px) scale(0.97);
+}

@@ -1,0 +1,8 @@
+<div class="detail-note">
+    <button class="close" (click)="noteClose.emit()">X</button>
+    <h1 class="tittle">{{ noteInfo().noteTittle }}</h1>
+    <p class="body">{{ noteInfo().noteBody }}</p>
+    <button class="pin" (click)="pinNote.emit(noteInfo().idNote)">pin</button>
+    <button class="edit" [routerLink]="['/note', noteInfo().idNote]">edit</button>
+    <button class="delete" (click)="deleteNote.emit(noteInfo().idNote)">delete</button>
+</div>

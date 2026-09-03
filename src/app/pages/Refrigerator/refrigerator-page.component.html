@@ -1,0 +1,42 @@
+<div class="refrigerator">
+
+    @if(pinnedNotes().length > 0) {
+        <section class="freezer">
+            <h2>TheRefrigerator</h2>
+            <div class="grid-notes pinned-grid">
+                @for (note of pinnedNotes(); track note.idNote) {
+                    <previewnote
+                        class="pinned-note"
+                        [note]="note"
+                        (openNote)="open($event)"/>
+                }
+            </div>
+        </section>
+    }
+
+    <section class="notes-area">
+
+        <div class="grid-notes">
+            @for (note of normalNotes(); track note.idNote) {
+                <previewnote
+                    [note]="note"
+                    (openNote)="open($event)"/>
+            }
+
+            <button class="addNote"
+                routerLink="/note"
+                routerLinkActive="active">
+                <span class="icon-add">+</span>
+            </button>
+        </div>
+    </section>
+
+    @if (selectedNote(); as noteInfo) {
+        <detailnote
+            [noteInfo]="noteInfo"
+            (noteClose)="closeNote()"
+            (deleteNote)="deleteNote($event)"
+            (pinNote)="pinNote($event)"/>
+    }
+
+</div>
