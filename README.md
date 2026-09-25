@@ -20,9 +20,9 @@ Este proyecto forma parte de mi aprendizaje con Angular, TypeScript y desarrollo
 
  ## Vista Previa
 
- ![The Refrigerador](./screenshots/refrigerator.png)
- ![The Refrigerador](./screenshots/detailnote.png)
- ![The Refrigerador](./screenshots/note-page.png)
+ ![The Refrigerador](./Frontend/the-refrigerator/screenshots/refrigerator.png)
+ ![The Refrigerador](./Frontend/the-refrigerator/screenshots/detailnote.png)
+ ![The Refrigerador](./Frontend/the-refrigerator/screenshots/note-page.png)
 
  ## Proximamente
   - Backend.
