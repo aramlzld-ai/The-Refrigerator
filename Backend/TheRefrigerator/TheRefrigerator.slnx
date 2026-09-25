@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TheRefrigerator.Api/TheRefrigerator.Api.csproj" />
+    <Project Path="src/TheRefrigerator.Application/TheRefrigerator.Application.csproj" />
+    <Project Path="src/TheRefrigerator.Domain/TheRefrigerator.Domain.csproj" />
+    <Project Path="src/TheRefrigerator.Persistance/TheRefrigerator.Persistance.csproj" />
+  </Folder>
+</Solution>

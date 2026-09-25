@@ -1,0 +1,7 @@
+@TheRefrigerator.Api_HostAddress = http://localhost:5100
+
+GET {{TheRefrigerator.Api_HostAddress}}/api/users
+Accept: application/json
+
+
+###
