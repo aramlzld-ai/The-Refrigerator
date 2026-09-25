@@ -1,14 +1,13 @@
 # The Refrigerator  
-The refrigerator es un bloc de notas web inspirado en un refrigerador.
+The Refrigerator es un bloc de notas web inspirado en un refrigerador.
 La idea es convertir notas en recordatorios dentro de una interfaz tematica que muchas veces es visible en la vida cotidiana.
 
-Este proyecto forma parte de mi aprendizaje con Angular, TypeScript y desarrollo web. Essta app comenzó como una forma de practicar conceptos que he estado aprendiendo y evolucionarlo hasta formar algo mas completo.
+Este proyecto forma parte de mi aprendizaje con Angular, TypeScript, desarrollo web y backend .NET. Esta app comenzó como una forma de practicar conceptos que he estado aprendiendo y evolucionarlo hasta formar algo mas completo.
 
 ## Tecnologías
- - Angular.
- - TypeScript.
- - HTML.
- - CSS.
+ - Frontend: Angular (TypeScript, HTML, CSS).
+ - Backend: ASP.NET Core, C#, SQL Server.
+ - Autenticacion: JWT
 
  ## v1.0
  - Crear Notes.
@@ -16,7 +15,7 @@ Este proyecto forma parte de mi aprendizaje con Angular, TypeScript y desarrollo
  - Editar Notas.
  - Eliminar Notas.
  - Guardar Notas utilizando localStorage.
- - Visualizar notas ddentro de una interfaz con tematica de refrigerador.
+ - Visualizar notas dentro de una interfaz con tematica de refrigerador.
 
  ## Vista Previa
 
@@ -24,9 +23,9 @@ Este proyecto forma parte de mi aprendizaje con Angular, TypeScript y desarrollo
  ![The Refrigerador](./Frontend/the-refrigerator/screenshots/detailnote.png)
  ![The Refrigerador](./Frontend/the-refrigerator/screenshots/note-page.png)
 
- ## Proximamente
-  - Backend.
+ ## Próximamente
+  - Conexión Angular + .NET.
   - Persistencia de datos en BD.
-  - Registro Usuarios
+  - Registro de Usuarios.
   - Rediseño completo de interfaz.
   - Interacciones.
