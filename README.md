@@ -1,12 +1,9 @@
 # The Refrigerator  
-The Refrigerator es un bloc de notas web inspirado en un refrigerador.
-La idea es convertir notas en recordatorios dentro de una interfaz tematica que muchas veces es visible en la vida cotidiana.
-
-Este proyecto forma parte de mi aprendizaje con Angular, TypeScript, desarrollo web y backend .NET. Esta app comenzó como una forma de practicar conceptos que he estado aprendiendo y evolucionarlo hasta formar algo mas completo.
+Aplicación web de bloc de notas con interfaz temática inspirada en un refrigerador. 
 
 ## Tecnologías
  - Frontend: Angular (TypeScript, HTML, CSS).
- - Backend: ASP.NET Core, C#, SQL Server.
+ - Backend: ASP.NET Core, C#, Entity Framework, SQL Server.
  - Autenticacion: JWT
 
  ## v1.0
