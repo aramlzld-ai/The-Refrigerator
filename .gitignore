@@ -30,7 +30,7 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-**/.angular/cache
+**/.angular/cache/
 .sass-cache/
 /connect.lock
 /coverage
@@ -46,6 +46,7 @@ Thumbs.db
 # .NET / Visual Studio
 **/bin/
 **/obj/
+appsettings.Development.json
 .vs/
 *.user
 *.suo
