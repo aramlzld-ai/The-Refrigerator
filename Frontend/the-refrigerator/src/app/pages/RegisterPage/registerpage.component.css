@@ -1,0 +1,111 @@
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(135deg, #d8dce0, #aeb6bf);
+}
+
+.register-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    width: 100%;
+    max-width: 320px;
+    padding: 42px 28px 30px;
+
+    box-sizing: border-box;
+    background: #dff2df;
+    color: #303a30;
+
+    border: 1px solid #c2ddc1;
+    border-radius: 2px;
+    box-shadow:
+        3px 5px 0 rgba(0, 0, 0, 0.05),
+        8px 12px 24px rgba(0, 0, 0, 0.18);
+
+    transform: rotate(1deg);
+}
+
+.register-form::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+
+    background: #d3a34f;
+    border: 2px solid #a67b35;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.register-form input {
+    width: 100%;
+    padding: 12px 10px;
+    box-sizing: border-box;
+
+    border: none;
+    border-bottom: 2px solid #a9c9a7;
+    border-radius: 0;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.4);
+    color: #303a30;
+    font: Caveat, sans-serif;
+
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.register-form input:focus {
+    border-bottom-color: #649b68;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.register-form input::placeholder {
+    color: #71856f;
+}
+
+.register-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+
+    background: #6e9b70;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+    box-shadow: 0 3px 0 #4e7950;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.register-form button:hover {
+    background: #59865c;
+}
+
+.register-form button:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.register-form a {
+    color: #4d7750;
+    text-align: center;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.register-form a:hover {
+    text-decoration: underline;
+}

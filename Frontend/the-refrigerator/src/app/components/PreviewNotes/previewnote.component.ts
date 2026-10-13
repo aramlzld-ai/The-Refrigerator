@@ -1,5 +1,5 @@
 import { Component, input, output } from "@angular/core";
-import { Note } from "../../interfaces/note.interface";
+import { Note } from "../../interfaces/Notes-Interfaces/note.interface";
 
 
 
@@ -14,6 +14,6 @@ export class PreviewNoteComponent{
     openNote = output<string>();
 
     open(){
-        this.openNote.emit(this.note().idNote);
+        this.openNote.emit(this.note().id);
     }
 }

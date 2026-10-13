@@ -50,3 +50,14 @@ appsettings.Development.json
 .vs/
 *.user
 *.suo
+
+# .NET / User Secrets and local configuration
+**/appsettings.Development.json
+**/secrets.json
+.env
+.env.*
+!.env.example
+
+# Local databases and sensitive files
+*.mdf
+*.ldf

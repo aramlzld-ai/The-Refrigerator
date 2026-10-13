@@ -1,5 +1,5 @@
 import { Component, input, output } from "@angular/core";
-import { Note } from "../../interfaces/note.interface";
+import { Note } from "../../interfaces/Notes-Interfaces/note.interface";
 import { RouterLink } from "@angular/router";
 
 

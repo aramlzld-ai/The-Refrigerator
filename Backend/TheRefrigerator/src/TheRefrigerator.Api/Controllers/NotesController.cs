@@ -51,6 +51,23 @@ namespace TheRefrigerator.Api.Controllers
             
         }
         [Authorize]
+        [HttpGet("{idNote}")]
+        public IActionResult GetNote(Guid idNote)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null || !Guid.TryParse(userId, out var userGuid)) {
+                return Unauthorized();
+            }
+            var note = _context.Notes.Find(idNote);
+            if (note == null) {
+                return NotFound();
+            }
+            if (note.idUser != userGuid) {
+                return Forbid();
+            }
+            return Ok(note);
+        }
+        [Authorize]
         [HttpDelete ("{idNote}")]
         public IActionResult DeleteNote(Guid idNote) {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -68,7 +85,7 @@ namespace TheRefrigerator.Api.Controllers
             
             _context.Notes.Remove(noteRemove);
             _context.SaveChanges();
-            return Ok("Nota Eliminada");
+            return NoContent();
         }
         [Authorize]
         [HttpPut("edit-note/{idNote}")]
@@ -109,7 +126,7 @@ namespace TheRefrigerator.Api.Controllers
             }
             findNote.pinNote = pinNoteDTO.pinNote;
             _context.SaveChanges();
-            return Ok("Note Pinned");
+            return NoContent();
         }
     }
 }

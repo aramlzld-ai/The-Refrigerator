@@ -6,13 +6,13 @@ Aplicación web de bloc de notas con interfaz temática inspirada en un refriger
  - Backend: ASP.NET Core, C#, Entity Framework, SQL Server.
  - Autenticacion: JWT
 
- ## v1.0
- - Crear Notes.
- - Fijar Notas.
- - Editar Notas.
- - Eliminar Notas.
- - Guardar Notas utilizando localStorage.
- - Visualizar notas dentro de una interfaz con tematica de refrigerador.
+ ## v2.0
+ - Registro e Inicio de Sesión de Usuarios.
+ - Autenticaión JWT.
+ - Crear, Editar, Fijar y Eliminar Notas.
+ - Persistencia de Datos SQL Server.
+ - Comunicación Angular + .NET.
+ - Protección de Endpoints.
 
  ## Vista Previa
 
@@ -20,9 +20,3 @@ Aplicación web de bloc de notas con interfaz temática inspirada en un refriger
  ![The Refrigerador](./Frontend/the-refrigerator/screenshots/detailnote.png)
  ![The Refrigerador](./Frontend/the-refrigerator/screenshots/note-page.png)
 
- ## Próximamente
-  - Conexión Angular + .NET.
-  - Persistencia de datos en BD.
-  - Registro de Usuarios.
-  - Rediseño completo de interfaz.
-  - Interacciones.

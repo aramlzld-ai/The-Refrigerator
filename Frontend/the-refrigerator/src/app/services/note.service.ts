@@ -1,41 +1,33 @@
-import { effect, Injectable, signal } from "@angular/core";
-import { Note } from "../interfaces/note.interface";
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
-const loadNote = (): Note[]=>{
-    const notes = localStorage.getItem('notes');
-    return notes ? JSON.parse(notes) : [];
-}
+import { Note } from "../interfaces/Notes-Interfaces/note.interface";
+import {API_URL} from "../config/api.config";
+import { Observable } from "rxjs";
+import { CreateNote } from "../interfaces/Notes-Interfaces/createnote.interface";
+import { UpdateNote } from "../interfaces/Notes-Interfaces/updatenote.interface";
+import { PinNote } from "../interfaces/Notes-Interfaces/pinnote.interface";
 
 @Injectable({providedIn: 'root'})
 export class NoteService{
-    notes = signal<Note[]>(loadNote());
+    constructor(private http: HttpClient) {}
 
-    saveNote = effect ( () =>{
-        localStorage.setItem('notes', JSON.stringify(this.notes()));
-    })
-    addNote(note: Note){
-        this.notes.update((list) => [... list, note])
+    getNotes(): Observable<Note[]> {
+        return this.http.get<Note[]>(`${API_URL}/notes/mynotes`);
     }
-    deleteNote(idNote: string){
-        this.notes.update((list) => list.filter((note) => note.idNote !== idNote));
+    createNote(note: CreateNote): Observable<Note> {
+        return this.http.post<Note>(`${API_URL}/notes/add-note`, note);
     }
-    editNote(idNote:string,updateNote: Note){
-        this.notes.update((notesList)=> notesList.map((note) => {
-            if(note.idNote === idNote){
-                return{...note, ...updateNote}
-            }
-            return note;
-        }))
+    deleteNote(idNote: string): Observable<string> {
+        return this.http.delete<string>(`${API_URL}/notes/${idNote}`);
     }
-    findNote(idNote: string){
-        return this.notes().find((note) => note.idNote === idNote);
+    editNote(idNote:string, note: UpdateNote): Observable<Note> {
+        return this.http.put<Note>(`${API_URL}/notes/edit-note/${idNote}`, note);
     }
-    pinNote(idNote: string){
-        this.notes.update((notesList)=> notesList.map((note) => {
-            if(note.idNote === idNote){
-                return{...note, pinned: !note.pinned}
-            }
-            return note;
-        }))
+    pinNote(idNote: string, note:PinNote): Observable<string>{
+        return this.http.put <string>(`${API_URL}/notes/${idNote}`, note);
+    }
+    findNote(idNote: string): Observable<Note> {
+        return this.http.get<Note>(`${API_URL}/notes/${idNote}`);
     }
 }

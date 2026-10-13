@@ -1,10 +1,16 @@
+<header class="refrigerator-header">
+        <button class="logout-btn" (click)="logout()">
+            <span>Cerrar Sesión</span>
+        </button>
+    </header>
+
 <div class="refrigerator">
 
     @if(pinnedNotes().length > 0) {
         <section class="freezer">
             <h2>TheRefrigerator</h2>
             <div class="grid-notes pinned-grid">
-                @for (note of pinnedNotes(); track note.idNote) {
+                @for (note of pinnedNotes(); track note.id) {
                     <previewnote
                         class="pinned-note"
                         [note]="note"
@@ -17,7 +23,7 @@
     <section class="notes-area">
 
         <div class="grid-notes">
-            @for (note of normalNotes(); track note.idNote) {
+            @for (note of normalNotes(); track note.id) {
                 <previewnote
                     [note]="note"
                     (openNote)="open($event)"/>
@@ -36,7 +42,7 @@
             [noteInfo]="noteInfo"
             (noteClose)="closeNote()"
             (deleteNote)="deleteNote($event)"
-            (pinNote)="pinNote($event)"/>
+            (pinNote)="togglePinNote($event)"/>
     }
-
+    <button class="logout" (click)="logout()">Logout</button>
 </div>
